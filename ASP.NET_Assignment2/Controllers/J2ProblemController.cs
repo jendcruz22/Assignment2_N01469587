@@ -8,9 +8,15 @@ using System.Web.Http;
 namespace ASP.NET_Assignment2.Controllers
 {
     //J2 Problem from 2007: I Speak TXTMSG
+
+    /// <summary>
+    /// Translation of abbreviated emoticons to their long form or meaning
+    /// <example>GET api/j2problem/txtmsg/:-) -> I'm happy</example>
+    /// </summary>
+    /// <returns>Emoticon translation</returns>
     public class J2ProblemController : ApiController
     {
-        //GET: api/j2problem/txtmsg/shortform
+        // GET: api/j2problem/txtmsg/shortform
         [HttpGet]
         [Route("api/j2problem/txtmsg/{shortform}")]
 
@@ -18,6 +24,7 @@ namespace ASP.NET_Assignment2.Controllers
        {
             string outputMessage;
 
+            // Switch case that assigns the outputMessage the translation to the abbreviation entered by the user 
             switch (ShortForm)
             {
 
