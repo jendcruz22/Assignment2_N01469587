@@ -11,14 +11,14 @@ namespace ASP.NET_Assignment2.Controllers
 
     /// <summary>
     /// Translation of abbreviated emoticons to their long form or meaning
-    /// <example>GET api/j2problem/txtmsg/:-) -> I'm happy</example>
+    /// <example>GET api/j2problem/txtmsg?ShortForm=(~.~) -> I'm sleepy</example>
     /// </summary>
     /// <returns>Emoticon translation</returns>
     public class J2ProblemController : ApiController
     {
-        // GET: api/j2problem/txtmsg/shortform
+        // GET: api/j2problem/txtmsg?ShortForm=
         [HttpGet]
-        [Route("api/j2problem/txtmsg/{shortform}")]
+        [Route("~/api/j2problem/txtmsg")]
 
         public string TXTMSG(string ShortForm)
        {
